@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Print_LimitModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DM_ChiTietNhanVienMayIn">
+    <Key>
+      <PropertyRef Name="ID_ChiTietNhanVienMayIn" />
+    </Key>
+    <Property Name="ID_ChiTietNhanVienMayIn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_NhanVien" Type="Int32" />
+    <Property Name="ID_MayIn" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DM_MayIn">
+    <Key>
+      <PropertyRef Name="ID_MayIn" />
+    </Key>
+    <Property Name="ID_MayIn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenMayIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaMayIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DM_NhanVien">
+    <Key>
+      <PropertyRef Name="ID_NhanVien" />
+    </Key>
+    <Property Name="ID_NhanVien" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Bios_MayTinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KeyNhomTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KeyNhomNhanVien" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SoLuongBanInTrongThang" Type="Int32" />
+    <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="InVoHan" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="DM_NhomNhanVien">
+    <Key>
+      <PropertyRef Name="ID_NhomNhanVien" />
+    </Key>
+    <Property Name="ID_NhomNhanVien" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNhomNhanVien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KeyNhomNhanVien" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="GhuChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuongBanInTrongThang" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DM_NhomTaiKhoan">
+    <Key>
+      <PropertyRef Name="ID_NhomTaiKhoan" />
+    </Key>
+    <Property Name="ID_NhomTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KeyNhomTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenNhomTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HT_ChiTietPhanQuyen">
+    <Key>
+      <PropertyRef Name="ID_ChiTietPhanQuyen" />
+    </Key>
+    <Property Name="ID_ChiTietPhanQuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KeyNhomTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KeyMenu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KeyChucNang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="HT_ChucNang">
+    <Key>
+      <PropertyRef Name="ID_ChucNang" />
+    </Key>
+    <Property Name="ID_ChucNang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KeyChucNang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenChucNang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HT_Menu">
+    <Key>
+      <PropertyRef Name="ID_Menu" />
+    </Key>
+    <Property Name="ID_Menu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KeyMenu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenMenu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TypeMenu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NV_BanIn">
+    <Key>
+      <PropertyRef Name="ID_BanIn" />
+    </Key>
+    <Property Name="ID_BanIn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTaiLieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaTaiLieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ID_NhanVien" Type="Int32" />
+    <Property Name="ThoiGianUpload" Type="DateTime" Precision="3" />
+    <Property Name="ThoiGianPrint" Type="DateTime" Precision="3" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="TrangThaiText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TongSoTrang" Type="Int32" />
+    <Property Name="TongSoTrangDaIn" Type="Int32" />
+    <Property Name="JobID" Type="Int32" />
+    <Property Name="TenMayIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenTaiLieuDinhKem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaperSize" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NV_PrintTam">
+    <Key>
+      <PropertyRef Name="ID_PrintTam" />
+    </Key>
+    <Property Name="ID_PrintTam" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Bios_MayTinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenTaiLieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenMayIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoMayIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TongSoTrang" Type="Int32" />
+    <Property Name="JobID" Type="Int32" />
+    <Property Name="JobStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StatusPrint" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayIn" Type="DateTime" Precision="3" />
+    <Property Name="TrangThaiText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaperSize" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Print_LimitEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DM_ChiTietNhanVienMayIn" EntityType="Self.DM_ChiTietNhanVienMayIn" />
+    <EntitySet Name="DM_MayIn" EntityType="Self.DM_MayIn" />
+    <EntitySet Name="DM_NhanVien" EntityType="Self.DM_NhanVien" />
+    <EntitySet Name="DM_NhomNhanVien" EntityType="Self.DM_NhomNhanVien" />
+    <EntitySet Name="DM_NhomTaiKhoan" EntityType="Self.DM_NhomTaiKhoan" />
+    <EntitySet Name="HT_ChiTietPhanQuyen" EntityType="Self.HT_ChiTietPhanQuyen" />
+    <EntitySet Name="HT_ChucNang" EntityType="Self.HT_ChucNang" />
+    <EntitySet Name="HT_Menu" EntityType="Self.HT_Menu" />
+    <EntitySet Name="NV_BanIn" EntityType="Self.NV_BanIn" />
+    <EntitySet Name="NV_PrintTam" EntityType="Self.NV_PrintTam" />
+    <EntitySet Name="GiaHans" EntityType="Print_LimitModel.GiaHan" />
+  </EntityContainer>
+  <EntityType Name="GiaHan">
+    <Key>
+      <PropertyRef Name="ID_GiaHan" />
+    </Key>
+    <Property Name="ID_GiaHan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ThoiGianKetThuc" Type="DateTime" Precision="0" />
+  </EntityType>
+</Schema>

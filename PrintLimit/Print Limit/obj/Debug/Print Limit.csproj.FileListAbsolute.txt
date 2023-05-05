@@ -1,0 +1,65 @@
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Print Limit.exe.config
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Print Limit.exe
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Print Limit.pdb
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Azure.Core.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\EntityFramework.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\EntityFramework.SqlServer.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.Graph.Core.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.Graph.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.Identity.Client.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.VisualStudio.Interop.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\ServiceStack.Text.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Buffers.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Memory.Data.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Memory.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Net.Http.WinHttpHandler.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Numerics.Vectors.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Text.Encodings.Web.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Text.Json.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.ValueTuple.dll
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Azure.Core.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\EntityFramework.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\EntityFramework.SqlServer.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.Graph.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.Graph.Core.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.Identity.Client.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.VisualStudio.Interop.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\Microsoft.VisualStudio.OLE.Interop.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\ServiceStack.Text.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Buffers.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Memory.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Memory.Data.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Net.Http.WinHttpHandler.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Numerics.Vectors.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Text.Encodings.Web.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Text.Json.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\bin\Debug\System.ValueTuple.xml
+D:\Repo\PrintManager\Print Limit\Print Limit\obj\Debug\Print Limit.csproj.AssemblyReference.cache
+D:\Repo\PrintManager\Print Limit\Print Limit\obj\Debug\Print Limit.csproj.SuggestedBindingRedirects.cache
+D:\Repo\PrintManager\Print Limit\Print Limit\obj\Debug\Print Limit.csproj.CoreCompileInputs.cache
+D:\Repo\PrintManager\Print Limit\Print Limit\obj\Debug\Print Limit.csproj.CopyComplete
+D:\Repo\PrintManager\Print Limit\Print Limit\obj\Debug\Print Limit.exe
+D:\Repo\PrintManager\Print Limit\Print Limit\obj\Debug\Print Limit.pdb

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Print_LimitModelStoreContainer" CdmEntityContainer="Print_LimitEntities">
+    <EntitySetMapping Name="DM_ChiTietNhanVienMayIn">
+      <EntityTypeMapping TypeName="Print_LimitModel.DM_ChiTietNhanVienMayIn">
+        <MappingFragment StoreEntitySet="DM_ChiTietNhanVienMayIn">
+          <ScalarProperty Name="ID_ChiTietNhanVienMayIn" ColumnName="ID_ChiTietNhanVienMayIn" />
+          <ScalarProperty Name="ID_NhanVien" ColumnName="ID_NhanVien" />
+          <ScalarProperty Name="ID_MayIn" ColumnName="ID_MayIn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_MayIn">
+      <EntityTypeMapping TypeName="Print_LimitModel.DM_MayIn">
+        <MappingFragment StoreEntitySet="DM_MayIn">
+          <ScalarProperty Name="ID_MayIn" ColumnName="ID_MayIn" />
+          <ScalarProperty Name="TenMayIn" ColumnName="TenMayIn" />
+          <ScalarProperty Name="MaMayIn" ColumnName="MaMayIn" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_NhanVien">
+      <EntityTypeMapping TypeName="Print_LimitModel.DM_NhanVien">
+        <MappingFragment StoreEntitySet="DM_NhanVien">
+          <ScalarProperty Name="InVoHan" ColumnName="InVoHan" />
+          <ScalarProperty Name="ID_NhanVien" ColumnName="ID_NhanVien" />
+          <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+          <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="Bios_MayTinh" ColumnName="Bios_MayTinh" />
+          <ScalarProperty Name="KeyNhomTaiKhoan" ColumnName="KeyNhomTaiKhoan" />
+          <ScalarProperty Name="KeyNhomNhanVien" ColumnName="KeyNhomNhanVien" />
+          <ScalarProperty Name="SoLuongBanInTrongThang" ColumnName="SoLuongBanInTrongThang" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_NhomNhanVien">
+      <EntityTypeMapping TypeName="Print_LimitModel.DM_NhomNhanVien">
+        <MappingFragment StoreEntitySet="DM_NhomNhanVien">
+          <ScalarProperty Name="ID_NhomNhanVien" ColumnName="ID_NhomNhanVien" />
+          <ScalarProperty Name="TenNhomNhanVien" ColumnName="TenNhomNhanVien" />
+          <ScalarProperty Name="KeyNhomNhanVien" ColumnName="KeyNhomNhanVien" />
+          <ScalarProperty Name="GhuChu" ColumnName="GhuChu" />
+          <ScalarProperty Name="SoLuongBanInTrongThang" ColumnName="SoLuongBanInTrongThang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_NhomTaiKhoan">
+      <EntityTypeMapping TypeName="Print_LimitModel.DM_NhomTaiKhoan">
+        <MappingFragment StoreEntitySet="DM_NhomTaiKhoan">
+          <ScalarProperty Name="ID_NhomTaiKhoan" ColumnName="ID_NhomTaiKhoan" />
+          <ScalarProperty Name="KeyNhomTaiKhoan" ColumnName="KeyNhomTaiKhoan" />
+          <ScalarProperty Name="TenNhomTaiKhoan" ColumnName="TenNhomTaiKhoan" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_ChiTietPhanQuyen">
+      <EntityTypeMapping TypeName="Print_LimitModel.HT_ChiTietPhanQuyen">
+        <MappingFragment StoreEntitySet="HT_ChiTietPhanQuyen">
+          <ScalarProperty Name="ID_ChiTietPhanQuyen" ColumnName="ID_ChiTietPhanQuyen" />
+          <ScalarProperty Name="KeyNhomTaiKhoan" ColumnName="KeyNhomTaiKhoan" />
+          <ScalarProperty Name="KeyMenu" ColumnName="KeyMenu" />
+          <ScalarProperty Name="KeyChucNang" ColumnName="KeyChucNang" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_ChucNang">
+      <EntityTypeMapping TypeName="Print_LimitModel.HT_ChucNang">
+        <MappingFragment StoreEntitySet="HT_ChucNang">
+          <ScalarProperty Name="ID_ChucNang" ColumnName="ID_ChucNang" />
+          <ScalarProperty Name="KeyChucNang" ColumnName="KeyChucNang" />
+          <ScalarProperty Name="TenChucNang" ColumnName="TenChucNang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_Menu">
+      <EntityTypeMapping TypeName="Print_LimitModel.HT_Menu">
+        <MappingFragment StoreEntitySet="HT_Menu">
+          <ScalarProperty Name="ID_Menu" ColumnName="ID_Menu" />
+          <ScalarProperty Name="KeyMenu" ColumnName="KeyMenu" />
+          <ScalarProperty Name="TenMenu" ColumnName="TenMenu" />
+          <ScalarProperty Name="TypeMenu" ColumnName="TypeMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NV_BanIn">
+      <EntityTypeMapping TypeName="Print_LimitModel.NV_BanIn">
+        <MappingFragment StoreEntitySet="NV_BanIn">
+          <ScalarProperty Name="PaperSize" ColumnName="PaperSize" />
+          <ScalarProperty Name="ID_BanIn" ColumnName="ID_BanIn" />
+          <ScalarProperty Name="TenTaiLieu" ColumnName="TenTaiLieu" />
+          <ScalarProperty Name="MaTaiLieu" ColumnName="MaTaiLieu" />
+          <ScalarProperty Name="ID_NhanVien" ColumnName="ID_NhanVien" />
+          <ScalarProperty Name="ThoiGianUpload" ColumnName="ThoiGianUpload" />
+          <ScalarProperty Name="ThoiGianPrint" ColumnName="ThoiGianPrint" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="TrangThaiText" ColumnName="TrangThaiText" />
+          <ScalarProperty Name="TongSoTrang" ColumnName="TongSoTrang" />
+          <ScalarProperty Name="TongSoTrangDaIn" ColumnName="TongSoTrangDaIn" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+          <ScalarProperty Name="TenMayIn" ColumnName="TenMayIn" />
+          <ScalarProperty Name="TenTaiLieuDinhKem" ColumnName="TenTaiLieuDinhKem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NV_PrintTam">
+      <EntityTypeMapping TypeName="Print_LimitModel.NV_PrintTam">
+        <MappingFragment StoreEntitySet="NV_PrintTam">
+          <ScalarProperty Name="PaperSize" ColumnName="PaperSize" />
+          <ScalarProperty Name="ID_PrintTam" ColumnName="ID_PrintTam" />
+          <ScalarProperty Name="Bios_MayTinh" ColumnName="Bios_MayTinh" />
+          <ScalarProperty Name="TenTaiLieu" ColumnName="TenTaiLieu" />
+          <ScalarProperty Name="TenMayIn" ColumnName="TenMayIn" />
+          <ScalarProperty Name="SoMayIn" ColumnName="SoMayIn" />
+          <ScalarProperty Name="TongSoTrang" ColumnName="TongSoTrang" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+          <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
+          <ScalarProperty Name="StatusPrint" ColumnName="StatusPrint" />
+          <ScalarProperty Name="NgayIn" ColumnName="NgayIn" />
+          <ScalarProperty Name="TrangThaiText" ColumnName="TrangThaiText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiaHans">
+      <EntityTypeMapping TypeName="Print_LimitModel.GiaHan">
+        <MappingFragment StoreEntitySet="GiaHan">
+          <ScalarProperty Name="ThoiGianKetThuc" ColumnName="ThoiGianKetThuc" />
+          <ScalarProperty Name="ID_GiaHan" ColumnName="ID_GiaHan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

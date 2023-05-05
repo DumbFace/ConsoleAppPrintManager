@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Print_LimitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DM_ChiTietNhanVienMayIn">
+          <Key>
+            <PropertyRef Name="ID_ChiTietNhanVienMayIn" />
+          </Key>
+          <Property Name="ID_ChiTietNhanVienMayIn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_NhanVien" Type="int" />
+          <Property Name="ID_MayIn" Type="int" />
+        </EntityType>
+        <EntityType Name="DM_MayIn">
+          <Key>
+            <PropertyRef Name="ID_MayIn" />
+          </Key>
+          <Property Name="ID_MayIn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenMayIn" Type="nvarchar(max)" />
+          <Property Name="MaMayIn" Type="nvarchar(max)" />
+          <Property Name="GhiChu" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="DM_NhanVien">
+          <Key>
+            <PropertyRef Name="ID_NhanVien" />
+          </Key>
+          <Property Name="ID_NhanVien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenNhanVien" Type="nvarchar(max)" />
+          <Property Name="DiaChi" Type="nvarchar(max)" />
+          <Property Name="SoDienThoai" Type="nvarchar(max)" />
+          <Property Name="TenTaiKhoan" Type="varchar(max)" />
+          <Property Name="MatKhau" Type="varchar(max)" />
+          <Property Name="Bios_MayTinh" Type="nvarchar(max)" />
+          <Property Name="KeyNhomTaiKhoan" Type="nvarchar(max)" />
+          <Property Name="KeyNhomNhanVien" Type="varchar(max)" />
+          <Property Name="SoLuongBanInTrongThang" Type="int" />
+          <Property Name="Code" Type="varchar" MaxLength="10" />
+          <Property Name="InVoHan" Type="bit" />
+        </EntityType>
+        <EntityType Name="DM_NhomNhanVien">
+          <Key>
+            <PropertyRef Name="ID_NhomNhanVien" />
+          </Key>
+          <Property Name="ID_NhomNhanVien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenNhomNhanVien" Type="nvarchar(max)" />
+          <Property Name="KeyNhomNhanVien" Type="varchar(max)" />
+          <Property Name="GhuChu" Type="nvarchar(max)" />
+          <Property Name="SoLuongBanInTrongThang" Type="int" />
+        </EntityType>
+        <EntityType Name="DM_NhomTaiKhoan">
+          <Key>
+            <PropertyRef Name="ID_NhomTaiKhoan" />
+          </Key>
+          <Property Name="ID_NhomTaiKhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KeyNhomTaiKhoan" Type="nvarchar(max)" />
+          <Property Name="TenNhomTaiKhoan" Type="nvarchar(max)" />
+          <Property Name="GhiChu" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="GiaHan">
+          <Key>
+            <PropertyRef Name="ID_GiaHan" />
+          </Key>
+          <Property Name="ID_GiaHan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ThoiGianKetThuc" Type="date" />
+        </EntityType>
+        <EntityType Name="HT_ChiTietPhanQuyen">
+          <Key>
+            <PropertyRef Name="ID_ChiTietPhanQuyen" />
+          </Key>
+          <Property Name="ID_ChiTietPhanQuyen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KeyNhomTaiKhoan" Type="nvarchar(max)" />
+          <Property Name="KeyMenu" Type="nvarchar(max)" />
+          <Property Name="KeyChucNang" Type="nvarchar(max)" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="HT_ChucNang">
+          <Key>
+            <PropertyRef Name="ID_ChucNang" />
+          </Key>
+          <Property Name="ID_ChucNang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KeyChucNang" Type="nvarchar(max)" />
+          <Property Name="TenChucNang" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="HT_Menu">
+          <Key>
+            <PropertyRef Name="ID_Menu" />
+          </Key>
+          <Property Name="ID_Menu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KeyMenu" Type="nvarchar(max)" />
+          <Property Name="TenMenu" Type="nvarchar(max)" />
+          <Property Name="TypeMenu" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="NV_BanIn">
+          <Key>
+            <PropertyRef Name="ID_BanIn" />
+          </Key>
+          <Property Name="ID_BanIn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenTaiLieu" Type="nvarchar(max)" />
+          <Property Name="MaTaiLieu" Type="nvarchar(max)" />
+          <Property Name="ID_NhanVien" Type="int" />
+          <Property Name="ThoiGianUpload" Type="datetime" />
+          <Property Name="ThoiGianPrint" Type="datetime" />
+          <Property Name="TrangThai" Type="bit" />
+          <Property Name="TrangThaiText" Type="nvarchar(max)" />
+          <Property Name="TongSoTrang" Type="int" />
+          <Property Name="TongSoTrangDaIn" Type="int" />
+          <Property Name="JobID" Type="int" />
+          <Property Name="TenMayIn" Type="nvarchar(max)" />
+          <Property Name="TenTaiLieuDinhKem" Type="nvarchar(max)" />
+          <Property Name="PaperSize" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="NV_PrintTam">
+          <Key>
+            <PropertyRef Name="ID_PrintTam" />
+          </Key>
+          <Property Name="ID_PrintTam" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Bios_MayTinh" Type="nvarchar(max)" />
+          <Property Name="TenTaiLieu" Type="nvarchar(max)" />
+          <Property Name="TenMayIn" Type="nvarchar(max)" />
+          <Property Name="SoMayIn" Type="nvarchar(max)" />
+          <Property Name="TongSoTrang" Type="int" />
+          <Property Name="JobID" Type="int" />
+          <Property Name="JobStatus" Type="nvarchar(max)" />
+          <Property Name="StatusPrint" Type="nvarchar(max)" />
+          <Property Name="NgayIn" Type="datetime" />
+          <Property Name="TrangThaiText" Type="nvarchar(max)" />
+          <Property Name="PaperSize" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="Print_LimitModelStoreContainer">
+          <EntitySet Name="DM_ChiTietNhanVienMayIn" EntityType="Self.DM_ChiTietNhanVienMayIn" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DM_MayIn" EntityType="Self.DM_MayIn" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DM_NhanVien" EntityType="Self.DM_NhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DM_NhomNhanVien" EntityType="Self.DM_NhomNhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DM_NhomTaiKhoan" EntityType="Self.DM_NhomTaiKhoan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GiaHan" EntityType="Self.GiaHan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HT_ChiTietPhanQuyen" EntityType="Self.HT_ChiTietPhanQuyen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HT_ChucNang" EntityType="Self.HT_ChucNang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HT_Menu" EntityType="Self.HT_Menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NV_BanIn" EntityType="Self.NV_BanIn" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NV_PrintTam" EntityType="Self.NV_PrintTam" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Print_LimitModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DM_ChiTietNhanVienMayIn">
+          <Key>
+            <PropertyRef Name="ID_ChiTietNhanVienMayIn" />
+          </Key>
+          <Property Name="ID_ChiTietNhanVienMayIn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_NhanVien" Type="Int32" />
+          <Property Name="ID_MayIn" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DM_MayIn">
+          <Key>
+            <PropertyRef Name="ID_MayIn" />
+          </Key>
+          <Property Name="ID_MayIn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenMayIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MaMayIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DM_NhanVien">
+          <Key>
+            <PropertyRef Name="ID_NhanVien" />
+          </Key>
+          <Property Name="ID_NhanVien" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNhanVien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SoDienThoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TenTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Bios_MayTinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KeyNhomTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KeyNhomNhanVien" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SoLuongBanInTrongThang" Type="Int32" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="InVoHan" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="DM_NhomNhanVien">
+          <Key>
+            <PropertyRef Name="ID_NhomNhanVien" />
+          </Key>
+          <Property Name="ID_NhomNhanVien" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNhomNhanVien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KeyNhomNhanVien" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="GhuChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SoLuongBanInTrongThang" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DM_NhomTaiKhoan">
+          <Key>
+            <PropertyRef Name="ID_NhomTaiKhoan" />
+          </Key>
+          <Property Name="ID_NhomTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KeyNhomTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TenNhomTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HT_ChiTietPhanQuyen">
+          <Key>
+            <PropertyRef Name="ID_ChiTietPhanQuyen" />
+          </Key>
+          <Property Name="ID_ChiTietPhanQuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KeyNhomTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KeyMenu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KeyChucNang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="HT_ChucNang">
+          <Key>
+            <PropertyRef Name="ID_ChucNang" />
+          </Key>
+          <Property Name="ID_ChucNang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KeyChucNang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TenChucNang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HT_Menu">
+          <Key>
+            <PropertyRef Name="ID_Menu" />
+          </Key>
+          <Property Name="ID_Menu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KeyMenu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TenMenu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TypeMenu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="NV_BanIn">
+          <Key>
+            <PropertyRef Name="ID_BanIn" />
+          </Key>
+          <Property Name="ID_BanIn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenTaiLieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MaTaiLieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ID_NhanVien" Type="Int32" />
+          <Property Name="ThoiGianUpload" Type="DateTime" Precision="3" />
+          <Property Name="ThoiGianPrint" Type="DateTime" Precision="3" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <Property Name="TrangThaiText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TongSoTrang" Type="Int32" />
+          <Property Name="TongSoTrangDaIn" Type="Int32" />
+          <Property Name="JobID" Type="Int32" />
+          <Property Name="TenMayIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TenTaiLieuDinhKem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaperSize" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="NV_PrintTam">
+          <Key>
+            <PropertyRef Name="ID_PrintTam" />
+          </Key>
+          <Property Name="ID_PrintTam" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Bios_MayTinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TenTaiLieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TenMayIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SoMayIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TongSoTrang" Type="Int32" />
+          <Property Name="JobID" Type="Int32" />
+          <Property Name="JobStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StatusPrint" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NgayIn" Type="DateTime" Precision="3" />
+          <Property Name="TrangThaiText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaperSize" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Print_LimitEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DM_ChiTietNhanVienMayIn" EntityType="Self.DM_ChiTietNhanVienMayIn" />
+          <EntitySet Name="DM_MayIn" EntityType="Self.DM_MayIn" />
+          <EntitySet Name="DM_NhanVien" EntityType="Self.DM_NhanVien" />
+          <EntitySet Name="DM_NhomNhanVien" EntityType="Self.DM_NhomNhanVien" />
+          <EntitySet Name="DM_NhomTaiKhoan" EntityType="Self.DM_NhomTaiKhoan" />
+          <EntitySet Name="HT_ChiTietPhanQuyen" EntityType="Self.HT_ChiTietPhanQuyen" />
+          <EntitySet Name="HT_ChucNang" EntityType="Self.HT_ChucNang" />
+          <EntitySet Name="HT_Menu" EntityType="Self.HT_Menu" />
+          <EntitySet Name="NV_BanIn" EntityType="Self.NV_BanIn" />
+          <EntitySet Name="NV_PrintTam" EntityType="Self.NV_PrintTam" />
+          <EntitySet Name="GiaHans" EntityType="Print_LimitModel.GiaHan" />
+        </EntityContainer>
+        <EntityType Name="GiaHan">
+          <Key>
+            <PropertyRef Name="ID_GiaHan" />
+          </Key>
+          <Property Name="ID_GiaHan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ThoiGianKetThuc" Type="DateTime" Precision="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Print_LimitModelStoreContainer" CdmEntityContainer="Print_LimitEntities">
+          <EntitySetMapping Name="DM_ChiTietNhanVienMayIn">
+            <EntityTypeMapping TypeName="Print_LimitModel.DM_ChiTietNhanVienMayIn">
+              <MappingFragment StoreEntitySet="DM_ChiTietNhanVienMayIn">
+                <ScalarProperty Name="ID_ChiTietNhanVienMayIn" ColumnName="ID_ChiTietNhanVienMayIn" />
+                <ScalarProperty Name="ID_NhanVien" ColumnName="ID_NhanVien" />
+                <ScalarProperty Name="ID_MayIn" ColumnName="ID_MayIn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DM_MayIn">
+            <EntityTypeMapping TypeName="Print_LimitModel.DM_MayIn">
+              <MappingFragment StoreEntitySet="DM_MayIn">
+                <ScalarProperty Name="ID_MayIn" ColumnName="ID_MayIn" />
+                <ScalarProperty Name="TenMayIn" ColumnName="TenMayIn" />
+                <ScalarProperty Name="MaMayIn" ColumnName="MaMayIn" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DM_NhanVien">
+            <EntityTypeMapping TypeName="Print_LimitModel.DM_NhanVien">
+              <MappingFragment StoreEntitySet="DM_NhanVien">
+                <ScalarProperty Name="InVoHan" ColumnName="InVoHan" />
+                <ScalarProperty Name="ID_NhanVien" ColumnName="ID_NhanVien" />
+                <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="Bios_MayTinh" ColumnName="Bios_MayTinh" />
+                <ScalarProperty Name="KeyNhomTaiKhoan" ColumnName="KeyNhomTaiKhoan" />
+                <ScalarProperty Name="KeyNhomNhanVien" ColumnName="KeyNhomNhanVien" />
+                <ScalarProperty Name="SoLuongBanInTrongThang" ColumnName="SoLuongBanInTrongThang" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DM_NhomNhanVien">
+            <EntityTypeMapping TypeName="Print_LimitModel.DM_NhomNhanVien">
+              <MappingFragment StoreEntitySet="DM_NhomNhanVien">
+                <ScalarProperty Name="ID_NhomNhanVien" ColumnName="ID_NhomNhanVien" />
+                <ScalarProperty Name="TenNhomNhanVien" ColumnName="TenNhomNhanVien" />
+                <ScalarProperty Name="KeyNhomNhanVien" ColumnName="KeyNhomNhanVien" />
+                <ScalarProperty Name="GhuChu" ColumnName="GhuChu" />
+                <ScalarProperty Name="SoLuongBanInTrongThang" ColumnName="SoLuongBanInTrongThang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DM_NhomTaiKhoan">
+            <EntityTypeMapping TypeName="Print_LimitModel.DM_NhomTaiKhoan">
+              <MappingFragment StoreEntitySet="DM_NhomTaiKhoan">
+                <ScalarProperty Name="ID_NhomTaiKhoan" ColumnName="ID_NhomTaiKhoan" />
+                <ScalarProperty Name="KeyNhomTaiKhoan" ColumnName="KeyNhomTaiKhoan" />
+                <ScalarProperty Name="TenNhomTaiKhoan" ColumnName="TenNhomTaiKhoan" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HT_ChiTietPhanQuyen">
+            <EntityTypeMapping TypeName="Print_LimitModel.HT_ChiTietPhanQuyen">
+              <MappingFragment StoreEntitySet="HT_ChiTietPhanQuyen">
+                <ScalarProperty Name="ID_ChiTietPhanQuyen" ColumnName="ID_ChiTietPhanQuyen" />
+                <ScalarProperty Name="KeyNhomTaiKhoan" ColumnName="KeyNhomTaiKhoan" />
+                <ScalarProperty Name="KeyMenu" ColumnName="KeyMenu" />
+                <ScalarProperty Name="KeyChucNang" ColumnName="KeyChucNang" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HT_ChucNang">
+            <EntityTypeMapping TypeName="Print_LimitModel.HT_ChucNang">
+              <MappingFragment StoreEntitySet="HT_ChucNang">
+                <ScalarProperty Name="ID_ChucNang" ColumnName="ID_ChucNang" />
+                <ScalarProperty Name="KeyChucNang" ColumnName="KeyChucNang" />
+                <ScalarProperty Name="TenChucNang" ColumnName="TenChucNang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HT_Menu">
+            <EntityTypeMapping TypeName="Print_LimitModel.HT_Menu">
+              <MappingFragment StoreEntitySet="HT_Menu">
+                <ScalarProperty Name="ID_Menu" ColumnName="ID_Menu" />
+                <ScalarProperty Name="KeyMenu" ColumnName="KeyMenu" />
+                <ScalarProperty Name="TenMenu" ColumnName="TenMenu" />
+                <ScalarProperty Name="TypeMenu" ColumnName="TypeMenu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NV_BanIn">
+            <EntityTypeMapping TypeName="Print_LimitModel.NV_BanIn">
+              <MappingFragment StoreEntitySet="NV_BanIn">
+                <ScalarProperty Name="PaperSize" ColumnName="PaperSize" />
+                <ScalarProperty Name="ID_BanIn" ColumnName="ID_BanIn" />
+                <ScalarProperty Name="TenTaiLieu" ColumnName="TenTaiLieu" />
+                <ScalarProperty Name="MaTaiLieu" ColumnName="MaTaiLieu" />
+                <ScalarProperty Name="ID_NhanVien" ColumnName="ID_NhanVien" />
+                <ScalarProperty Name="ThoiGianUpload" ColumnName="ThoiGianUpload" />
+                <ScalarProperty Name="ThoiGianPrint" ColumnName="ThoiGianPrint" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="TrangThaiText" ColumnName="TrangThaiText" />
+                <ScalarProperty Name="TongSoTrang" ColumnName="TongSoTrang" />
+                <ScalarProperty Name="TongSoTrangDaIn" ColumnName="TongSoTrangDaIn" />
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+                <ScalarProperty Name="TenMayIn" ColumnName="TenMayIn" />
+                <ScalarProperty Name="TenTaiLieuDinhKem" ColumnName="TenTaiLieuDinhKem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NV_PrintTam">
+            <EntityTypeMapping TypeName="Print_LimitModel.NV_PrintTam">
+              <MappingFragment StoreEntitySet="NV_PrintTam">
+                <ScalarProperty Name="PaperSize" ColumnName="PaperSize" />
+                <ScalarProperty Name="ID_PrintTam" ColumnName="ID_PrintTam" />
+                <ScalarProperty Name="Bios_MayTinh" ColumnName="Bios_MayTinh" />
+                <ScalarProperty Name="TenTaiLieu" ColumnName="TenTaiLieu" />
+                <ScalarProperty Name="TenMayIn" ColumnName="TenMayIn" />
+                <ScalarProperty Name="SoMayIn" ColumnName="SoMayIn" />
+                <ScalarProperty Name="TongSoTrang" ColumnName="TongSoTrang" />
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+                <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
+                <ScalarProperty Name="StatusPrint" ColumnName="StatusPrint" />
+                <ScalarProperty Name="NgayIn" ColumnName="NgayIn" />
+                <ScalarProperty Name="TrangThaiText" ColumnName="TrangThaiText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GiaHans">
+            <EntityTypeMapping TypeName="Print_LimitModel.GiaHan">
+              <MappingFragment StoreEntitySet="GiaHan">
+                <ScalarProperty Name="ThoiGianKetThuc" ColumnName="ThoiGianKetThuc" />
+                <ScalarProperty Name="ID_GiaHan" ColumnName="ID_GiaHan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Print_LimitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DM_ChiTietNhanVienMayIn">
+    <Key>
+      <PropertyRef Name="ID_ChiTietNhanVienMayIn" />
+    </Key>
+    <Property Name="ID_ChiTietNhanVienMayIn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_NhanVien" Type="int" />
+    <Property Name="ID_MayIn" Type="int" />
+  </EntityType>
+  <EntityType Name="DM_MayIn">
+    <Key>
+      <PropertyRef Name="ID_MayIn" />
+    </Key>
+    <Property Name="ID_MayIn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenMayIn" Type="nvarchar(max)" />
+    <Property Name="MaMayIn" Type="nvarchar(max)" />
+    <Property Name="GhiChu" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DM_NhanVien">
+    <Key>
+      <PropertyRef Name="ID_NhanVien" />
+    </Key>
+    <Property Name="ID_NhanVien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenNhanVien" Type="nvarchar(max)" />
+    <Property Name="DiaChi" Type="nvarchar(max)" />
+    <Property Name="SoDienThoai" Type="nvarchar(max)" />
+    <Property Name="TenTaiKhoan" Type="varchar(max)" />
+    <Property Name="MatKhau" Type="varchar(max)" />
+    <Property Name="Bios_MayTinh" Type="nvarchar(max)" />
+    <Property Name="KeyNhomTaiKhoan" Type="nvarchar(max)" />
+    <Property Name="KeyNhomNhanVien" Type="varchar(max)" />
+    <Property Name="SoLuongBanInTrongThang" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="10" />
+    <Property Name="InVoHan" Type="bit" />
+  </EntityType>
+  <EntityType Name="DM_NhomNhanVien">
+    <Key>
+      <PropertyRef Name="ID_NhomNhanVien" />
+    </Key>
+    <Property Name="ID_NhomNhanVien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenNhomNhanVien" Type="nvarchar(max)" />
+    <Property Name="KeyNhomNhanVien" Type="varchar(max)" />
+    <Property Name="GhuChu" Type="nvarchar(max)" />
+    <Property Name="SoLuongBanInTrongThang" Type="int" />
+  </EntityType>
+  <EntityType Name="DM_NhomTaiKhoan">
+    <Key>
+      <PropertyRef Name="ID_NhomTaiKhoan" />
+    </Key>
+    <Property Name="ID_NhomTaiKhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyNhomTaiKhoan" Type="nvarchar(max)" />
+    <Property Name="TenNhomTaiKhoan" Type="nvarchar(max)" />
+    <Property Name="GhiChu" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="GiaHan">
+    <Key>
+      <PropertyRef Name="ID_GiaHan" />
+    </Key>
+    <Property Name="ID_GiaHan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ThoiGianKetThuc" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_ChiTietPhanQuyen">
+    <Key>
+      <PropertyRef Name="ID_ChiTietPhanQuyen" />
+    </Key>
+    <Property Name="ID_ChiTietPhanQuyen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyNhomTaiKhoan" Type="nvarchar(max)" />
+    <Property Name="KeyMenu" Type="nvarchar(max)" />
+    <Property Name="KeyChucNang" Type="nvarchar(max)" />
+    <Property Name="TrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="HT_ChucNang">
+    <Key>
+      <PropertyRef Name="ID_ChucNang" />
+    </Key>
+    <Property Name="ID_ChucNang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyChucNang" Type="nvarchar(max)" />
+    <Property Name="TenChucNang" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="HT_Menu">
+    <Key>
+      <PropertyRef Name="ID_Menu" />
+    </Key>
+    <Property Name="ID_Menu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyMenu" Type="nvarchar(max)" />
+    <Property Name="TenMenu" Type="nvarchar(max)" />
+    <Property Name="TypeMenu" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="NV_BanIn">
+    <Key>
+      <PropertyRef Name="ID_BanIn" />
+    </Key>
+    <Property Name="ID_BanIn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTaiLieu" Type="nvarchar(max)" />
+    <Property Name="MaTaiLieu" Type="nvarchar(max)" />
+    <Property Name="ID_NhanVien" Type="int" />
+    <Property Name="ThoiGianUpload" Type="datetime" />
+    <Property Name="ThoiGianPrint" Type="datetime" />
+    <Property Name="TrangThai" Type="bit" />
+    <Property Name="TrangThaiText" Type="nvarchar(max)" />
+    <Property Name="TongSoTrang" Type="int" />
+    <Property Name="TongSoTrangDaIn" Type="int" />
+    <Property Name="JobID" Type="int" />
+    <Property Name="TenMayIn" Type="nvarchar(max)" />
+    <Property Name="TenTaiLieuDinhKem" Type="nvarchar(max)" />
+    <Property Name="PaperSize" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="NV_PrintTam">
+    <Key>
+      <PropertyRef Name="ID_PrintTam" />
+    </Key>
+    <Property Name="ID_PrintTam" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Bios_MayTinh" Type="nvarchar(max)" />
+    <Property Name="TenTaiLieu" Type="nvarchar(max)" />
+    <Property Name="TenMayIn" Type="nvarchar(max)" />
+    <Property Name="SoMayIn" Type="nvarchar(max)" />
+    <Property Name="TongSoTrang" Type="int" />
+    <Property Name="JobID" Type="int" />
+    <Property Name="JobStatus" Type="nvarchar(max)" />
+    <Property Name="StatusPrint" Type="nvarchar(max)" />
+    <Property Name="NgayIn" Type="datetime" />
+    <Property Name="TrangThaiText" Type="nvarchar(max)" />
+    <Property Name="PaperSize" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="Print_LimitModelStoreContainer">
+    <EntitySet Name="DM_ChiTietNhanVienMayIn" EntityType="Self.DM_ChiTietNhanVienMayIn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DM_MayIn" EntityType="Self.DM_MayIn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DM_NhanVien" EntityType="Self.DM_NhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DM_NhomNhanVien" EntityType="Self.DM_NhomNhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DM_NhomTaiKhoan" EntityType="Self.DM_NhomTaiKhoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GiaHan" EntityType="Self.GiaHan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HT_ChiTietPhanQuyen" EntityType="Self.HT_ChiTietPhanQuyen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HT_ChucNang" EntityType="Self.HT_ChucNang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HT_Menu" EntityType="Self.HT_Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NV_BanIn" EntityType="Self.NV_BanIn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NV_PrintTam" EntityType="Self.NV_PrintTam" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
